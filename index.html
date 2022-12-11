@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Git Documentation</title>
+  </head>
+  <body>
+      <nav id="navbar">
+        <header id="title">Git Documentation</header>
+        <ul>
+            <li><a href="#What_is_Version_Control_?" class="nav-link">What is Version Control ?</a></li>
+            <li><a href="#What_is_Git_?" class="nav-link">What is Git ?</a></li>
+            <li><a href="#Why_Git_?" class="nav-link">Why Git ?</a></li>
+            <li><a href="#Get_started_with_Git" class="nav-link">Get started with Git</a></li>
+            <li><a href="#Configure_Git" class="nav-link">Configure Git</a></li>
+            <li><a href="#Creating_folder_using_Command" class="nav-link">Creating folder using Command</a></li>
+            <li><a href="#Adding_new_files_in_Git" class="nav-link">Adding new files in Git</a></li>
+            <li><a href="#Git_Staging_Environment" class="nav-link">Git Staging Environment</a></li>
+            <li><a href="#Git_Status" class="nav-link">Git Status</a></li>
+            <li><a href="#Git_Log" class="nav-link">Git Log</a></li>
+            <li><a href="#Reference" class="nav-link">Reference</a></li>
+            <li><a href="#Author_Section">Author Section</a></li>
+        </ul>
+      </nav>
+    <div class="container">
+    <main id="main-doc">
+      <section class="main-section" id="What_is_Version_Control_?">
+        <header>What is Version Control ?</header>
+        <div class="topics">
+           
+            <p>
+              Version control is a system that records changes to a file or set of
+              files over time so that you can recall specific versions later. So
+              ideally, we can place any file in the computer on version control.
+            </p>
+          </div>
+      </section>
+
+      <section class="main-section" id="What_is_Git_?">
+        <header>What is Git ?</header>
+        <div class="topics">
+          
+          <p>
+            Git is a version-control system for tracking changes in computer
+            files and coordinating work on those files among multiple people.
+            Git is a Distributed Version Control System. 
+          </p>
+          <p>
+            So Git does not
+            necessarily rely on a central server to store all the versions of a
+            project’s files.
+          </p>
+          <p>
+            Instead, every user “clones” a copy of a repository
+            (a collection of files) and has the full history of the project on
+            their own hard drive. 
+          </p>
+          <p>
+            This clone has all of the metadata of the
+            original while the original itself is stored on a self-hosted server
+            or a third party hosting service like GitHub.
+          </p>
+        </div>
+      </section>
+
+      <section class="main-section" id="Why_Git_?">
+        <header>Why Git ?</header>
+        <div class="topics">
+          <ol class="list">
+              <li>Over 70% of developers use Git!</li>
+              <li>Developers can work together from anywhere in the world.</li>
+              <li>Developers can see the full history of the project.</li>
+              <li>Developers can revert to earlier versions of a project.</li>
+              <li>Git does not store a separate copy of every file in every commit, but keeps track of changes made in each commit!</li>
+          </ol>
+         </div>
+      </section>
+
+      <section class="main-section" id="Get_started_with_Git">
+        <header>Get started with Git</header>
+          <div class="topics">
+            
+          <p>To start using Git, we are first going to open up our Command shell.</p>
+          <code>git --version</code>
+          </div>
+      </section>
+
+      <section class="main-section" id="Configure_Git">
+        <header>Configure Git</header>
+        <div class="topics">
+          <p>Now let Git know who you are. This is important for version control systems, as each Git commit uses this information:</p>
+          <code> git config --global user.name "project-test"
+            git config --global user.email "test@gmail.com"</code>
+        </div>
+      </section>
+
+      <section class="main-section" id="Creating_folder_using_Command">
+        <header>Creating folder using Command</header>
+        <div class="topics">
+          <code>mkdir myproject
+            cd myproject</code>
+          <p>&rarr; <span class="imp">mkdir</span> makes a new directory.</p>
+          <p>&rarr; <span class="imp">cd</span> changes the current working directory.</p>
+        </div>
+      </section>
+
+      <section class="main-section" id="Adding_new_files_in_Git">
+        <header>Adding new files in Git</header>
+        <div class="topics">
+          <p>So let's add some files, or create a new file using your favourite text editor. Then save or move it to the folder you just created.</p>
+          <p>Let's go back to the terminal and list the files in our current working directory:</p>
+          <code>ls
+            index.html</code>
+            <code>git add (name of file) </code>
+              <code>git add index.html</code>
+                <code>git status</code>
+                  <code>git commit</code>
+          <p>&rarr; <span class="imp">ls</span> will list the files in the directory. We can see that index.html is there</p>
+        </div>
+      </section>
+      <section class="main-section" id="Git_Staging_Environment">
+        <header>Git Staging Environment</header>
+        <div class="topics">
+          <p>One of the core functions of Git is the concepts of the Staging Environment, and the <strong>Commit</strong>.</p>
+          <p>As you are working, you may be adding, editing and removing files. But whenever you hit a milestone or finish a part of the work, you should add the files to a Staging Environment.</p>
+          <p>Staged files are files that are ready to be committed to the repository you are working on. You will learn more about <span class="imp">commit</span> shortly</p>
+          <code>git add index.html</code>
+          
+        </div>
+      </section>
+
+      <section class="main-section" id="Git_Status">
+        <header>Git Status</header>
+        <div class="topics">
+          <p>And check the <span class="imp">status</span> of our repository. But this time, we will use the --short option to see the changes in a more compact way:</p>
+          <code>git status --short
+            M index.html</code>
+        </div>
+      </section>
+
+      <section class="main-section" id="Git_Log">
+        <header>Git Log 
+        </header>
+        <div class="topics">
+          <p>To view the history of commits for a repository, you can use the <span class="imp">log</span> command:</p>
+        </div>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <div class="topics">
+          <ul>
+            <li><a href="https://www.freecodecamp.org/news/search/?query=git%20" class="ref-link">Basics of git for Begineer from freeCodeCamp</a></li>
+            <li><a href="https://en.wikipedia.org/wiki/Git" class="ref-link">Git Info from Wikipeda</a></li>
+            <li><a href="https://git-scm.com/doc" class="ref-link">Git Documentations</a></li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    </main>
+
+    <footer>
+      <section class="main-secton" id="Author_Section">
+        <div class="container">
+          <address>
+              <p>Website created by <a href="https://www.linkedin.com/in/vineshgurram/" class="creator-link" target="_blank">Vinesh Gurram</a></p>
+              <p>For any suggestion Mail me: <a href="mailto:vineshgurram@gmail.com" class="creator-link">vineshgurram@gmail.com</a></p>
+          </address>
+          <p>NO COPYRIGHTS &#169; ARE RESERVED</p>
+      </div>
+      </section>
+    </footer>
+  </body>
+</html>
